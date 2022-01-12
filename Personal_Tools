@@ -90,13 +90,10 @@ main (){
 								{
 									for (int a = 0; a < data; a++)
 									{
-										if (name[a] != "0")
-										{
 										cout << endl;
 										cout << "DATA   : [" << a  << "]" 	<< endl;
 										cout << "Name   : "  << name[a] 	<< endl;
 										cout << "number : "  << number[a] 	<< endl;
-										}
 									}
 									editind:
 									cout << "\nINSERT DATA INDEX : ";
@@ -142,13 +139,10 @@ main (){
 									{
 										for (int a = 0; a < data; a++)
 										{
-											if (name[a] != "0")
-											{
 											cout << endl;
 											cout << "DATA   : [" << a << "]"  << endl;
 											cout << "Name   : "  << name[a]   << endl;
 											cout << "number : "  << number[a] << endl;
-											}
 										}
 									}
 								deleteind:	
