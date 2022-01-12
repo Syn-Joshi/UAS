@@ -7,7 +7,7 @@ main (){
     int pil, pnumber;
     string pass, Password, username;
 
-	cout << "==WELCOME TO MOBILE PHONE PROGRAM==\n" << endl;
+	cout << "==WELCOME TO PERSONAL TOOLS PROGRAM==\n" << endl;
 	cout << "please sign up before you start the program\n" << endl;
 	cout << "USERNAME : ";
 	cin >> username;
