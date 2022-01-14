@@ -1,25 +1,54 @@
 #include <iostream>
-
+#include <cctype>
 using namespace std;
 
 int
 main (){
     int pil, pnumber;
-    string pass, Password, username;
+    char pass[100];
+	bool checkPass = false;
+    int passLength;
+	string Password, username;
 
 	cout << "==WELCOME TO PERSONAL TOOLS PROGRAM==\n" << endl;
 	cout << "please sign up before you start the program\n" << endl;
+	
+	newpass:
+	cout << "Please make a Password : ";
+	cin.getline(pass, 100);
+
+	passLength = sizeof(pass[100] / sizeof(pass[0]));
+    for(int i = 0; i < 1; i++) {
+        for(int x = 0; x < passLength; x++) 
+		{
+            if(isupper(pass[i])) {
+                if(islower(pass[x])) {
+                    checkPass = true;
+                }
+            }
+            if(islower(pass[i])) {
+                if(isupper(pass[x])) {
+                    checkPass = true;
+                }
+            }
+        }
+    }
+
+    if( checkPass == true ) {
+	cout << "PASSWORD HAS BEEN SET !" << endl;
+	system("pause");
+	system("cls");
+    } 
+	else if ( checkPass == false ){
+        cout << "cannot create password!" <<endl;
+		goto newpass;
+    }
+
 	cout << "USERNAME : ";
 	cin >> username;
 	cout << "PHONE NUMBER : ";
 	cin >> pnumber;
 	cout << endl;
-	newpass:
-	cout << "Please make a Password : ";
-	cin >> pass;
-	cout << "PASSWORD HAS BEEN SET !" << endl;
-	system("pause");
-	system("cls");
 
 	logino:
 	cout << "== YOUR APPS ==" << endl;
